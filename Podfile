@@ -13,8 +13,11 @@ def application
   pod 'Kingfisher', '~> 5.0'
 end
 
-def network
+def rx_swift
   pod 'RxSwift', '~> 5'
+end
+
+def network
   pod 'RxCocoa', '~> 5'
   pod 'OrderedSet'
   pod 'Alamofire'
@@ -25,6 +28,8 @@ target 'Domain' do
   use_frameworks!
 
   # Pods for Domain
+  common
+  rx_swift
 
   target 'DomainTests' do
     # Pods for testing
@@ -37,6 +42,7 @@ target 'MVVMCleanArchitecture' do
   use_frameworks!
 
   # Pods for MVVMCleanArchitecture
+  common
 
   target 'MVVMCleanArchitectureTests' do
     inherit! :search_paths
@@ -55,6 +61,7 @@ target 'NetworkPlatform' do
 
   # Pods for NetworkPlatform
   common
+  rx_swift
   network
 
   target 'NetworkPlatformTests' do

@@ -32,6 +32,13 @@
 		222D742F2404C5AD0016E3B2 /* APIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D742D2404C5AD0016E3B2 /* APIInput.swift */; };
 		222D74322404C68D0016E3B2 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D74302404C68D0016E3B2 /* ResponseError.swift */; };
 		222D74332404C68D0016E3B2 /* APIResponseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D74312404C68D0016E3B2 /* APIResponseBase.swift */; };
+		222D74362404CE890016E3B2 /* GithubRepoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D74352404CE890016E3B2 /* GithubRepoRepository.swift */; };
+		222D743A2404D2050016E3B2 /* GithubRepoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D74392404D2050016E3B2 /* GithubRepoResponse.swift */; };
+		222D74452404FA580016E3B2 /* RepositoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D74442404FA580016E3B2 /* RepositoryUseCase.swift */; };
+		222D74482404FAF30016E3B2 /* RepositoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D74472404FAF30016E3B2 /* RepositoryUseCase.swift */; };
+		222D744A2404FB9B0016E3B2 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D74492404FB9B0016E3B2 /* NetworkProvider.swift */; };
+		222D744C2404FC940016E3B2 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D744B2404FC940016E3B2 /* UseCaseProvider.swift */; };
+		222D744E2404FCC10016E3B2 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D744D2404FCC10016E3B2 /* UseCaseProvider.swift */; };
 		2520FB1FEB310D34E15A805A /* Pods_NetworkPlatform_NetworkPlatformTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C065B8066D01E19E5B263A90 /* Pods_NetworkPlatform_NetworkPlatformTests.framework */; };
 		370F6A7761053CE7A3894E7C /* Pods_MVVMCleanArchitectureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6566DB3F9752BC2C973B78 /* Pods_MVVMCleanArchitectureTests.framework */; };
 		469563CCE53F35DDCCFFCC1D /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAA025842B984D58852ADF0 /* Pods_Domain.framework */; };
@@ -150,6 +157,13 @@
 		222D742D2404C5AD0016E3B2 /* APIInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIInput.swift; sourceTree = "<group>"; };
 		222D74302404C68D0016E3B2 /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		222D74312404C68D0016E3B2 /* APIResponseBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponseBase.swift; sourceTree = "<group>"; };
+		222D74352404CE890016E3B2 /* GithubRepoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoRepository.swift; sourceTree = "<group>"; };
+		222D74392404D2050016E3B2 /* GithubRepoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoResponse.swift; sourceTree = "<group>"; };
+		222D74442404FA580016E3B2 /* RepositoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryUseCase.swift; sourceTree = "<group>"; };
+		222D74472404FAF30016E3B2 /* RepositoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryUseCase.swift; sourceTree = "<group>"; };
+		222D74492404FB9B0016E3B2 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		222D744B2404FC940016E3B2 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		222D744D2404FCC10016E3B2 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
 		2AAA025842B984D58852ADF0 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		358980C9F0BA9F5FE115BC96 /* Pods-NetworkPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkPlatform.debug.xcconfig"; path = "Target Support Files/Pods-NetworkPlatform/Pods-NetworkPlatform.debug.xcconfig"; sourceTree = "<group>"; };
 		4D589C14DB3B6D93E4C316E3 /* Pods-MVVMCleanArchitecture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMCleanArchitecture.debug.xcconfig"; path = "Target Support Files/Pods-MVVMCleanArchitecture/Pods-MVVMCleanArchitecture.debug.xcconfig"; sourceTree = "<group>"; };
@@ -288,6 +302,10 @@
 		222D73A02404B8640016E3B2 /* MVVMCleanArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				222D743F2404D86A0016E3B2 /* Extensions */,
+				222D743E2404D85A0016E3B2 /* Utilities */,
+				222D743D2404D8530016E3B2 /* Common */,
+				222D743B2404D79D0016E3B2 /* Scenes */,
 				222D73D12404B9CA0016E3B2 /* Application */,
 			);
 			path = MVVMCleanArchitecture;
@@ -344,6 +362,8 @@
 		222D73E72404BC9C0016E3B2 /* NetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				222D74462404FADF0016E3B2 /* UseCases */,
+				222D74342404CE780016E3B2 /* Repository */,
 				222D742B2404C59D0016E3B2 /* Common */,
 				222D74262404C31C0016E3B2 /* Network */,
 				222D73E82404BC9C0016E3B2 /* NetworkPlatform.h */,
@@ -364,6 +384,8 @@
 		222D740A2404BCC90016E3B2 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				222D74432404FA480016E3B2 /* UseCases */,
+				222D74372404CF190016E3B2 /* Entries */,
 				222D740B2404BCC90016E3B2 /* Domain.h */,
 				222D740C2404BCC90016E3B2 /* Info.plist */,
 			);
@@ -397,6 +419,85 @@
 				222D742D2404C5AD0016E3B2 /* APIInput.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		222D74342404CE780016E3B2 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				222D74352404CE890016E3B2 /* GithubRepoRepository.swift */,
+				222D74492404FB9B0016E3B2 /* NetworkProvider.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		222D74372404CF190016E3B2 /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				222D74382404D1D50016E3B2 /* APIResponse */,
+			);
+			path = Entries;
+			sourceTree = "<group>";
+		};
+		222D74382404D1D50016E3B2 /* APIResponse */ = {
+			isa = PBXGroup;
+			children = (
+				222D74392404D2050016E3B2 /* GithubRepoResponse.swift */,
+			);
+			path = APIResponse;
+			sourceTree = "<group>";
+		};
+		222D743B2404D79D0016E3B2 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				222D743C2404D83E0016E3B2 /* GithubRepo */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		222D743C2404D83E0016E3B2 /* GithubRepo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GithubRepo;
+			sourceTree = "<group>";
+		};
+		222D743D2404D8530016E3B2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		222D743E2404D85A0016E3B2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		222D743F2404D86A0016E3B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		222D74432404FA480016E3B2 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				222D74442404FA580016E3B2 /* RepositoryUseCase.swift */,
+				222D744B2404FC940016E3B2 /* UseCaseProvider.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		222D74462404FADF0016E3B2 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				222D74472404FAF30016E3B2 /* RepositoryUseCase.swift */,
+				222D744D2404FCC10016E3B2 /* UseCaseProvider.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		2FB361548E6B37DB16300E0A /* Frameworks */ = {
@@ -445,6 +546,7 @@
 				222D739C2404B8640016E3B2 /* Resources */,
 				C20833F5DFA4C7431825B1A7 /* [CP] Embed Pods Frameworks */,
 				222D74002404BC9C0016E3B2 /* Embed Frameworks */,
+				222D74422404F1880016E3B2 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -504,6 +606,7 @@
 				222D73E22404BC9C0016E3B2 /* Sources */,
 				222D73E32404BC9C0016E3B2 /* Frameworks */,
 				222D73E42404BC9C0016E3B2 /* Resources */,
+				222D74412404F17B0016E3B2 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -544,6 +647,7 @@
 				222D74052404BCC90016E3B2 /* Sources */,
 				222D74062404BCC90016E3B2 /* Frameworks */,
 				222D74072404BCC90016E3B2 /* Resources */,
+				222D74402404F16A0016E3B2 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -562,6 +666,7 @@
 				222D740D2404BCC90016E3B2 /* Sources */,
 				222D740E2404BCC90016E3B2 /* Frameworks */,
 				222D740F2404BCC90016E3B2 /* Resources */,
+				8AA1E548484F59AC97FF9786 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -605,6 +710,7 @@
 					};
 					222D74082404BCC90016E3B2 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					222D74102404BCC90016E3B2 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -692,6 +798,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		222D74402404F16A0016E3B2 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		222D74412404F17B0016E3B2 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		222D74422404F1880016E3B2 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		33E577196D0177A157E09A86 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -773,6 +933,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AA1E548484F59AC97FF9786 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Domain-DomainTests/Pods-Domain-DomainTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Domain-DomainTests/Pods-Domain-DomainTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Domain-DomainTests/Pods-Domain-DomainTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BF61A0D5EEACB4A737C5F6E4 /* [CP] Check Pods Manifest.lock */ = {
@@ -915,8 +1092,12 @@
 			files = (
 				222D74282404C3560016E3B2 /* Network.swift in Sources */,
 				222D742A2404C5150016E3B2 /* Constant.swift in Sources */,
+				222D744A2404FB9B0016E3B2 /* NetworkProvider.swift in Sources */,
 				222D74322404C68D0016E3B2 /* ResponseError.swift in Sources */,
+				222D74482404FAF30016E3B2 /* RepositoryUseCase.swift in Sources */,
 				222D742E2404C5AD0016E3B2 /* APIError.swift in Sources */,
+				222D744E2404FCC10016E3B2 /* UseCaseProvider.swift in Sources */,
+				222D74362404CE890016E3B2 /* GithubRepoRepository.swift in Sources */,
 				222D74332404C68D0016E3B2 /* APIResponseBase.swift in Sources */,
 				222D742F2404C5AD0016E3B2 /* APIInput.swift in Sources */,
 			);
@@ -934,6 +1115,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222D743A2404D2050016E3B2 /* GithubRepoResponse.swift in Sources */,
+				222D744C2404FC940016E3B2 /* UseCaseProvider.swift in Sources */,
+				222D74452404FA580016E3B2 /* RepositoryUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1363,6 +1547,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 829DE8382F6AD4B059DD67E4 /* Pods-Domain.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1381,6 +1566,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.storm.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1392,6 +1578,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 691652F24743C48A2C242C29 /* Pods-Domain.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

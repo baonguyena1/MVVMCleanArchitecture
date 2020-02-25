@@ -11,6 +11,9 @@ import Alamofire
 import RxSwift
 
 final class Network {
+    
+    static let shared = Network()
+    
     private var session: Alamofire.Session = {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 30
